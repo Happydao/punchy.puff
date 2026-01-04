@@ -20,6 +20,9 @@ body {
   color: var(--ink);
   background: radial-gradient(circle at 18% 18%, #7b3e7e 0%, var(--bg) 45%, #2a162c 100%);
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -80,7 +83,7 @@ main {
   flex-direction: column;
   gap: 36px;
   padding: 0 clamp(16px, 4vw, 80px) 32px;
-  min-height: calc(100vh - 80px);
+  flex: 1;
 }
 
 .hero {
@@ -279,6 +282,22 @@ main {
 .toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 18px 16px 28px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: #49a9ff;
+  text-decoration: underline;
 }
 
 [data-animate] {
