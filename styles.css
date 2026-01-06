@@ -54,6 +54,14 @@ a {
   gap: 16px;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .brand {
   font-family: "Bebas Neue", sans-serif;
   font-size: clamp(28px, 4vw, 38px);
@@ -71,11 +79,25 @@ a {
   align-items: center;
   gap: 8px;
   backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.pill:hover,
+.pill:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12px 28px rgba(255, 210, 122, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.12) inset;
 }
 
 .coingecko img {
   width: 20px;
   height: 20px;
+}
+
+.x-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
 main {
@@ -148,6 +170,12 @@ main {
 .btn.primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #ffffff;
+}
+
+.btn.primary:hover,
+.btn.primary:focus-visible {
+  box-shadow: 0 14px 30px rgba(255, 111, 174, 0.35), 0 0 18px rgba(255, 210, 122, 0.45);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .btn.ghost {
@@ -224,6 +252,16 @@ main {
 .text-link {
   color: var(--accent);
   font-weight: 600;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(255, 111, 174, 0.5);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .how {
